@@ -1,36 +1,12 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<script type="text/javascript">
-function loadXMLDoc()
-{
-var xmlhttp;
-var msg;
-if (window.XMLHttpRequest)
-  {// code for IE7+, Firefox, Chrome, Opera, Safari
-  xmlhttp=new XMLHttpRequest();
-  }
-else
-  {// code for IE6, IE5
-  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-  }
-xmlhttp.onreadystatechange=function()
-  {
-  if (xmlhttp.readyState==4 && xmlhttp.status==200)
-    {
-      document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
-     
-      alert(xmlhttp.responseText);
-    }
-  }
-xmlhttp.open("POST","getmsg.jsp",true);
-xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-xmlhttp.send("fname=Bill&lname=Gates");
-}
-</script>
+    <meta charset="UTF-8">
+    <title>HTML5</title>
 </head>
+
 <body>
-<h2>AJAX</h2>
-<button type="button" onclick="loadXMLDoc()">请求数据</button>
-<div id="myDiv"></div>
+    <!-- 将id=1001和姓名name=tianxn传到jsp中 -->
+    <a href=".../getmsg.jsp?id=1001&name=tianxin">删除员工</a>
 </body>
 </html>
